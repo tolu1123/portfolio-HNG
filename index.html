@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolu | Portfolio Website</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
+    <!-- Font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yellowtail&display=swap" rel="stylesheet">
+    <!-- Scripts to handle dynamic functionalities -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo open-sans-bold">Tolu <sup>TM</sup></h1>
+
+        <!-- The nav bar -->
+        <nav class="flex flex-row justify-between items-center gap-5 open-sans-semibold">
+            <div class="nav-lg md:flex justify-between items-center gap-3">
+                <a href="#about">About</a>
+                <a href="#goals">Goals</a>
+                <a href="#works">Works</a>
+                <a href="#hireMe">Contact Me</a>
+            </div>
+
+            <!-- The nav for mobile view -->
+            <div class="nav-sm md:hidden">
+                <span class="text-4xl hamburger"><i class="fa-sharp fa-solid fa-bars"></i></span>
+        
+                <div class="dropDown">
+                    <ul class="">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#goals">Goals</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#hireMe">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    <!-- The hero section -->
+    <div class="hero">
+        <!-- herobg -  https://hng.tech/media/images/landing/hero_bg.png -->
+
+        <!-- The informatics -->
+        <div class="roleText">
+            <h1 class="open-sans-extrabold">Hi, I'm Tolu.</h1>
+            <!-- My Job Role  -->
+            <div class="jobDescription">
+                <code class="">
+                    &lt;
+                </code>
+
+                <h3 class="role open-sans-semibold">ML Engineer</h3>
+                <!-- The typing cursor  -->
+                <span class="caret">&nbsp;</span>
+                
+                <code class="">
+                    /&gt;
+                </code>
+
+            </div>
+        </div>
+
+        <!-- My slack profile picture -->
+        <div class="pics">
+            <!-- <img class="background" src="https://hng.tech/media/images/landing/logo_l.png" alt="Background for my image"> -->
+            <div class="frame">
+                <!-- The div for my actual image with the one on background on a spin offset with an actual overlay of my picture -->
+                <div class="overlay">
+                    <img src="./images/author.jpg" alt="My slackProfilePicture">
+                </div>
+                <!-- The actual image -->
+                <div class="actualImg">
+                    <img src="./images/author.jpg" data-testid="slackProfilePicture" alt="My slackProfilePicture">
+                </div>
+                
+                <!-- extra aesthetics -->
+                <div class="extraAesthetics">
+                    <img src="https://hng.tech/media/images/landing/badge.png" alt="Extra aesthetics">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- About Me -->
+    <div id="about" class="section about-me">
+        <!-- The Company image -->
+        <div class="about-icon">
+            <i class="fa-thin fa-cubes"></i>
+        </div>
+
+        <!-- The about me info of the section -->
+        <div class="about-info">
+            <h3 class="about-heading open-sans-bold">ABOUT ME</h3>
+            <div class="about-text inter-regular">
+                I am a creative and passionate frontend developer skilled in HTML, CSS, JavaScript, TailwindCSS, React and Figma. I excel at crafting stimulating, functional, and compelling designs that meet specified requirements. My work merges aesthetic appeal with technical precision to deliver engaging and effective user experiences.
+            </div>
+            <div class="about-text inter-regular">
+                I am currently at HNG, I am participating in its HNG11 internship. You wanna connect with me? My SlackId is 
+                <span data-testid="slackDisplayName" style="color: var(--blue); font-weight: 700;">Tolu1123</span>. Yet if you want to reach out to me. My email is <span data-testid="slackEmail" style="color: var(--blue); font-weight: 700;">toluene1123.gmail.com</span> 
+            </div>
+            <div class="about-text inter-regular">
+                If you want to be like me, and get into tech more fully, you can join the HNG internship. It is a great place to start your tech journey. Here is a link to the <a  data-testid="hngLink" target="_blank" href="https://hng.tech/learn" style="color: var(--blue);">HNG website</a>. 
+                You may also want to visit <a   data-testid="keywordLink" target="_blank" href="http://keyword.dog" style="color: var(--blue);">keyword.dog</a> and <a   data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/" target="_blank" style="color: var(--blue);">scrapeanyweb.site</a>. These two websites are also a great place to start your tech journey. 
+            </div>
+            <a href="https://github.com/tolu1123" target="_blank">
+                <button class="about-button inter-medium">
+                    LEARN MORE
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- My Goals section? -->
+    <div id="goals" class="myGoals section">
+        <h3 class="goalsHeading open-sans-bold">MY GOALS</h3>
+        <p class="inter-regular">This is what i plan to achieve over the course of the <b>next two years</b> in the ever evolving tech field</p>
+        <div class="">
+            <ul class="inter-regular">
+                <li>I want to complete my internship with HNG</li>
+                <li>I want to learn and build projects with Typescript,NEXT.js and C#</li>
+                <li>I want to get Bruno Simon's 3D Animation Course and learn to build interactive 3D applications.</li>
+                <li>I want to collaborate in Open Source projects.</li>
+                <li>I want to also help newbies who earnestly desire to write code.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- The Time Section -->
+    <div class="time section">
+        <h3 class="inter-medium">
+            <!-- This is where the time appears -->
+            <span>Today is</span>
+            <span data-testid="currentDay" class="currentDay"></span>
+            <span data-testid="currentTimeUTC" class="currentTimeUTC"></span>
+        </h3>
+    </div>
+
+    <!-- The works section -->
+    <div class="section works" id="works">
+
+        <!-- The title of the works section -->
+        <div class="workHeader">
+            <h3 class="workHeading open-sans-bold">MY WORKS</h3>
+            <div class="">
+                <span class="inter-regular">
+                    <a class="" target="_blank" href="https://www.github.com/tolu1123">See all projects on Github</a></span> 
+                <span class="go-icon"><i class="fa-regular fa-angle-right"></i></span>
+            </div>
+        </div>
+
+        <!-- The body of the works section -->
+        <div class="work-content">
+
+
+            <!-- Each project blog -->
+            <div class="project project-1">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            MAMA TOLU'S RESTAURANT
+                        </h5>
+
+                        <p class="inter-regular">
+                            For Mama Tolu's renowned restaurant, I developed the "Chicken Immortal" recipe website, showcasing their signature dish with an engaging and user-friendly interface. This project, available at Chicken Immortal, highlights my expertise in HTML,CSS, TailwindCSS, and JavaScript. The site features vibrant visuals, seamless navigation, and a compelling design that reflects the restaurant's unique culinary flair, providing users with an immersive and enjoyable experience.
+                        </p>
+                        <div class="buttons">
+                            
+                            <a target="_blank" href="https://secret-recipe-eight.vercel.app">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a target="_blank" href="https://github.com/tolu1123/secretRecipe">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/chickenImmortal.png" alt="An image of MAMA TOLU restaurant website">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/chickenImmortal-lg.png" alt="An image of MAMA TOLU restaurant website">
+                </div>
+            </div>
+
+            <!-- This is the Div for the notes Application -->
+            <div class="project project-2">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            MY NOTES APP
+                        </h5>
+
+                        <p class="inter-regular">
+                            I developed a comprehensive notes application, accessible at Notes App, designed to streamline note-taking with advanced user authentication features. The app includes custom email and password sign-up, username and password sign-in, federated identity provider support, an optional "remember me" feature, and a "forgot password" option. While still in development, future enhancements will include biometric sign-in for mobile devices, showcasing my commitment to user convenience and security.
+                        </p>
+
+                        <div class="buttons">
+                            
+                            <a href="https://notes-app-zeta.vercel.app" target="_blank">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a href="https://github.com/tolu1123/notesApp" target="_blank">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- The imageFrame for the notes application -->
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/notesApp.png" alt="An image of the Notes Application">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/notesApp-lg.png" alt="An image of the Notes Application">
+                </div>
+            </div>
+
+            <!-- This is the Div for Ridone portfolio project -->
+            <div class="project project-">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            Ridone<sup style="font-size: 10px;">TM</sup>
+                        </h5>
+
+                        <p class="inter-regular">
+                            I created a dynamic portfolio website for a highly skilled and efficient professional, highlighting his expertise in both machine learning and mechanical engineering. The site, available at Ridone Portfolio, effectively showcases his diverse skill set and achievements in both fields. This project demonstrates my ability to design and develop tailored web solutions that elegantly present a multifaceted professional profile.
+                        </p>
+                        <div class="buttons">
+                            
+                            <a href="https://ridone.vercel.app" target="_blank">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a href="https://github.com/tolu1123/portfolioWebsite" target="_blank">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- This is the imageFrame for Ridone's portfolio project -->
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/ridonePortfolio.png" alt="An image of Ridone's Portfolio website">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/ridonePortfolio-lg.png" alt="An image of Ridone's Portfolio website">
+                </div>
+            </div>
+           
+            <!-- This is the Div for the Calculator Application -->
+            <div class="project project-">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            Calculator App
+                        </h5>
+
+                        <p class="inter-regular">
+                            I developed a sophisticated calculator app, accessible at Calculator App, that offers comprehensive functionalities, including basic and advanced calculations. The app features a sleek design with light and dark mode options to enhance user experience. It boasts precise calculations up to the 7th decimal place, and it supports keyboard inputs for desktop and extended hardware keyboard users. This project highlights my ability to blend functionality with elegant design, ensuring a seamless and enjoyable user experience for all mathematical computations.
+                        </p>
+                        <div class="buttons">
+                            
+                            <a href="https://calculator-app-iota-ten.vercel.app/" target="_blank">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a href="https://github.com/tolu1123/CalculatorApp" target="_blank">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- The image frame for the calculator application -->
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/calculatorApp.png" alt="An image of the calculator Application">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/calculatorApp-lg.png" alt="An image of the calculator Application">
+                </div>
+            </div>
+           
+            <!-- This is the div for the Organic Farm Application -->
+            <div class="project project-">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            Organick
+                        </h5>
+
+                        <p class="inter-regular">
+                            I developed "Organick," a fictional e-commerce website dedicated to offering a convenient platform for users to purchase and receive fresh, organic food products directly to their doorstep. The site, available at Organick Farm, emphasizes sustainability, health, and convenience, aiming to revolutionize the way people access and consume organic food products. Organick ensures a seamless shopping experience with user-friendly navigation, secure payment options, and detailed product information. By prioritizing locally-sourced, eco-friendly produce, Organick helps consumers make informed choices for their farm needs while supporting sustainable farming practices.
+                        </p>
+                        <div class="buttons">
+                            
+                            <a href="https://organick-farm-eight.vercel.app" target="_blank">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a href="https://github.com/tolu1123/organickFarm" target="_blank">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- The imageFrame for the Organick Farm Application -->
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/organickFarm.png" alt="An image of Organick Farm website">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/organickFarm-lg.png" alt="An image of Organick Farm website">
+                </div>
+            </div>
+
+
+            <!-- This is the div for the ofh Agency Application -->
+            <div class="project project-">
+                <div class="project-info">
+                    <div class="project-data">
+                        <!-- This div contains the details about the project -->
+                        <h5 class="project-heading open-sans-bold">
+                            OFH Agency
+                        </h5>
+
+                        <p class="inter-regular">
+                            I developed a website for a forward-thinking technological agency, accessible at OFH Agency, which provides innovative tech solutions to the global market. The agency specializes in Game Development, Blockchain Development, Artificial Intelligence, and Software Development. A standout feature of this agency is its commitment to nurturing the next generation of tech talent by selecting 100 successful applicants each year for comprehensive training in their chosen technological field. This project underscores my ability to create impactful web solutions that not only showcase the agency's diverse services but also highlight its significant role in transforming the technological landscape of Africa and beyond.
+                        </p>
+                        <div class="buttons">
+                            
+                            <a href="https://ofh-agency.vercel.app" target="_blank">
+                                <button class="inter-medium live-link">
+                                    <span>View-live</span>
+                                    <i class="fa-light fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
+                            
+                            <a href="https://github.com/tolu1123/ofhAgency" target="_blank">
+                                <button class="inter-medium repo-link">
+                                    <img
+                                    width='25'
+                                    height='25'
+                                    class=''
+                                    src='./images/github-logo-sm.png' 
+                                    alt="Github Logo" 
+                                    />
+
+                                    <!-- The second image will only appear upon hovering  -->
+                                    <img
+                                    width='25'
+                                    height='25' 
+                                    class=''
+                                    src='./images/github-logo-sm-white.png' 
+                                    alt="Github Logo" 
+                                    />
+                                    <span>Go to Repo</span>
+                                </button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- This is the div for the OFH Agency website -->
+                <div class="imageFrame">
+                    <img class="work-Pic" src="./images/ofhAgency.png" alt="An image of OFH agency website">
+
+                    <!-- The image below will only show at large screens -->
+                    <img class="work-Pic" src="./images/ofhAgency-lg.png" alt="An image of OFH agency website">
+                </div>
+            </div>
+             
+        </div>
+    </div>
+
+    <!-- Blog section -->
+    <div id='blog' class="blog section w-full relative flex flex-col items-center justify-content py-16 px-5">
+
+        <!-- The heading -->
+        <div class="blog-heading mb-10">
+            <h3
+            class='open-sans-bold text-3xl text-darkGreen leading-[110%] mb-5 text-center'
+            >
+                My Blog
+            </h3>
+
+            <p
+            class='inter-regular max-w-lg'
+            >
+                Here my deep understanding on my skillset can be found. It also helps to contribute to the total society at large
+            </p>
+        </div>
+
+        <!-- The block of blogs  -->
+        <div class="blog-block w-full flex flex-col sm:flex-row gap-6 sm:gap-10 sm:px-4 lg:px-20">
+
+            <div class="blog-piece sm:w-1/2 bg-white pt-8 pb-12 px-8 rounded-3xl">
+                <!-- The div for the image -->
+                <div class="blog-piece-img overflow-hidden rounded-2xl mb-4">
+
+                    <!-- This element is used for the image -->
+                    <img 
+                    src="./images/react.jpg" 
+                    alt="A developer's default react screen"
+                    class='w-full aspect-[1100/619] object-cover'
+                    />
+
+                </div>
+
+                <!-- The data for the blog -->
+                <div class="blog-piece-data">
+                    <!-- div for the tag -->
+                    <div class="tag flex flex-row gap-3 mb-4">
+
+                        <!-- The date tag -->
+                        <span class="date bg-blushPink text-coralPink inline-block text-xs inter-medium px-4 py-2 rounded-full">
+                            October 5, 2022
+                        </span>
+
+                        <!--/* The blog category -->
+                        <span className="category bg-frostedWhite text-seaFoamBlue inline-block text-xs inter-medium px-4 py-2 rounded-full">
+                            Machine Learning
+                        </span>
+                    </div>
+
+                    <!-- The title of the blog -->
+                    <h4 class="blog-title open-sans-bold text-lg leading-[130%] mb-1">
+                        Genetic Algorithm as a Solution to Large Optimization Problems
+                    </h4>
+
+                    <!-- Hook piece -->
+                    <p class="hook inter-regular text-sm line-clamp-2 text-ellipsis mb-4">
+                        Long time ago, nature solved the problem of living with the existence species that can adapt and survive in different kinds of environments on earth. An example of this is evident in the variation of bears such as North American bear, Polar bear, brown bear. The different types of bears are solutions to bear adaptation in their respective geographic location. Likewise, Genetic Algorithm is a copycat of this natural phenomenon in computer science and operation research.
+                    </p>
+
+                    <!-- The button to read more of the blog -->
+                    <a
+                    target='_blank'
+                    href='https://medium.com/@amokunridwan/genetic-algorithm-as-a-solution-to-large-optimization-problems-6cd407e6181a'
+                    class="inline-block bg-darkGreen hover:bg-white text-white transition-all duration-150 ease-linear hover:text-darkGreen inter-medium text-sm leading-[130%] rounded-full px-4 py-2 shadow-sm shadow-darkGreen text-nowrap"
+                    >
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hire Me section -->
+    <div id='hireMe' class='hireMe'>
+
+        <div class="hireMe-container">
+
+            <!-- The Title for the hireMe -->
+            <div class="hireMe-header">
+                <h3 
+                class='open-sans-bold'
+                >Hire Me</h3>
+
+                <p class="inter-light">As a Frontend Developer with a strong background in designing aesthetics and creating intuitive user interfaces , I excel in solving complex programming challenges. Contact me to discuss how my skills can contribute to your next project.
+                </p>
+            </div>
+
+            <!-- The form for the HireMe section -->
+            <div class="hireMe-content">
+
+                <form
+                autocomplete="off"
+                >
+                    <!-- The name of the person that wants to connect with me -->
+                    <div class="nameDiv span-full span-1 span-center">
+
+                        <input 
+                        type="text"
+                        name="user_name" 
+                        id="user_name"
+                        required
+                        class='inter-light'
+                        />
+
+                        <label 
+                        for="user_name"
+                        class='inter-light'>
+                            Name*
+                        </label>
+                    </div>
+
+                    <!-- The name of the company, organization, university the action taker is acting in behalf of  -->
+                    <div class="companyDiv span-full span-2 span-center">
+
+                        <input 
+                        type="text" 
+                        name="user_organization" 
+                        id="user_organization"
+                        required
+                        class='inter-light'
+                        />
+
+                        <label 
+                        for="user_organization"
+                        class='inter-light'
+                        >
+                            Company*
+                        </label>
+                    </div>
+
+                    <div class="mailDiv span-full">
+                        <input 
+                            type="text" 
+                            name="user_email" 
+                            id="user_email"
+                            required
+                            class='inter-light'
+                        />
+
+                        <label 
+                        for="user_email"
+                        class='inter-light'
+                        >
+                            Email*
+                        </label>
+                    </div>
+
+                    <!-- The div that contains the hire me message. -->
+                    <div class="optionalMessage col-span-2">
+                        <label 
+                        for="message"
+                        class='message inter-light'
+                        >
+                            How can i help you?*
+                        </label>
+
+                        <textarea 
+                        name="message" 
+                        id="message"
+                        class='inter-light'
+                        >
+                        </textarea>
+                    </div>
+
+
+                    <button 
+                    type="submit"
+                    class=""
+                    >
+                        Send Message
+                    </button>
+
+
+                </form>
+
+            </div>
+
+            <img 
+            src='./images/squiggly.png' 
+            class='squiggly'
+            alt="" />
+
+        </div>
+        
+    </div>
+
+    <!--  the Footer section -->
+    <footer class="section">
+
+        <div class="">
+            <!-- The organisation's reserved rights -->
+            <div class="footer-quote">
+                <div class="footer-icon">
+                    <!-- The Organization logo -->
+                    <i class="fa-thin fa-cubes"></i>
+                </div>
+                <div>
+                    Elevating Technology, Empowering You.
+                    <br>
+                    Made with love <span><i class="fa-sharp fa-light fa-heart"></i></span> from Ibadan, Nigeria.
+                </div>
+            </div>
+
+            <!-- The organiation address -->
+            <div class="footer-address">
+                <h4 class="open-sans-bold">MY STUDIO</h4>
+                &nbsp;
+                <div class="">
+                    Contact us at No.112, Idunnu Avenue, <br>
+                    Alakuta, Awotan, Apete, Ibadan, Nigeria.
+                    <br>
+                    toluene1123@gmail.com
+                    <br>
+                    (+234) 706 374 1935
+                </div>
+            </div>
+
+            <!-- The newsletter and social media links -->
+            <div class="footer-newsletter">
+
+                <!-- The newsletter -->
+                <div class="">
+                    <h4 class="open-sans-bold">STAY IN TOUCH</h4>
+                    <div class="footer-form">
+                        <input class="" type="text" name="" id="" placeholder="Subscribe our newsletter">
+                        <button class=""><i class="fa-light fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <!-- social media links -->
+                <div class="footer-social">
+                    <a href="" class=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" class=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="" class=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="" class=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="" class=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- The baseline text -->
+        <div class="footer-baseline">
+            <div class="">
+                <span class="">HELP</span>
+                <span>TERMS & CONDITION</span>
+                <span>PRIVACY</span>
+            </div>
+
+            <div class="copyright">
+               Copyright © 2024 - Tolulope Ojo 2024. 
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
