@@ -11,12 +11,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    width: 100%;
-    /* overflow: auto; */
-    overflow-x: clip;
-    overflow-y: auto;
-}
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 300 to 800
@@ -169,7 +163,7 @@ nav a {
 .nav-sm .dropDown{
     width: min(400px, 80vw);
     position: absolute;
-    display: inline-block;
+    display: none;
     top: 60px;
     right: 0%;
     transform: translateX(100%);
@@ -179,7 +173,7 @@ nav a {
     height: 100vh;
 }
 .dropDown-visible {
-    /* display: block !important; */
+    display: block !important;
     transform: translateX(0%) !important;
 }
 .dropDown ul {
