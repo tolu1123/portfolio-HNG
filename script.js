@@ -1,7 +1,7 @@
 let options = {
     root: null,
     rootMargin: "0px",
-    threshold: [0 ,0.25, 0.5, 0.75],
+    threshold: [0 ,0.25, 0.5, 0.75, 1],
 };
 
 // setting the intersection observer api to automatically detect section elements as they enter
@@ -12,8 +12,9 @@ let sectionsObserver = new IntersectionObserver(sectionCallBack, options);
 function sectionCallBack(entries) {
     entries.forEach(entry => {
         const scrollDistance = scrollY;
-        const topDistance = entry.target.offsetTop - 160;
+        const topDistance = entry.target.offsetTop - 60;
         const elementHeight = entry.target.offsetHeight;
+
 
         if(entry.isIntersecting && scrollDistance >= topDistance && scrollDistance < topDistance + elementHeight) {
             // remove the style that indicates that the links are active    
@@ -21,11 +22,12 @@ function sectionCallBack(entries) {
 
             // get the id of the of the entry
             let id = entry.target.getAttribute('id');
+            console.log(id)
 
             //find the related links in the DOM
             let links = document.querySelectorAll(`a[href = '#${id}']`);
             links.forEach(link => {
-                link.classList.add('.underline');
+                link.classList.add('underline');
             })
         }
     })
@@ -41,11 +43,13 @@ function removeActiveClass() {
 }
 
 let sections = document.querySelectorAll('.section');
+console.log(sections, 'sections')
 sections.forEach((ele) => {
     sectionsObserver.observe(ele);
 })
 
 // Setting the modal
+let navSm = document.querySelector('.nav-sm');
 let hamburger = document.querySelector('.hamburger');
 let dropDown = document.querySelector('.dropDown');
 let state = false;

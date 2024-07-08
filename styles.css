@@ -1,18 +1,14 @@
 :root {
     --blue: #00aeff;
     --black: rgba(15, 23, 42, 0.95);
-    /* width: 100vw; */
     height: 100vh;
     scroll-behavior: smooth;
-
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: auto;
-    scrollbar-color: var(--blue) rgb(255,255,255);
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name
@@ -40,6 +36,14 @@
 } */
 
 /* Fonts */
+.open-sans-regular {
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 .open-sans-semibold {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -117,11 +121,12 @@ header{
     background-color: var(--blue);
     width: 100%;
     height: 60px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     padding: 10px 20px;
     color: white;
-    z-index: 999;
+    z-index: 9999;
 }
 header .logo {
     font-size: 30px;
@@ -139,20 +144,16 @@ nav {
 }
 nav a {
     text-decoration: none;
-    /* color: white; */
-
 }
 .hide {
     display: none;
-}
-.nav-sm {
-
 }
 .nav-lg {
     display: none;
 }
 .underline{
-    border-bottom: 1px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    font-weight: 600;
 }
 .nav-sm span:first-child {
     font-size: 30px;
@@ -161,17 +162,17 @@ nav a {
 .nav-sm .dropDown{
     width: min(400px, 80vw);
     position: absolute;
-    display: none;
+    display: block;
     top: 60px;
     left: 100%;
     transform: translateX(100%);
     background-color: var(--blue);
     color: #fff;
-    transition: all 0.3s linear;
+    transition: transform 0.7s linear;
     height: 100vh;
 }
 .dropDown-visible {
-    display: block !important;
+    /* display: block !important; */
     transform: translateX(-100%) !important;
 }
 .dropDown ul {
@@ -285,7 +286,7 @@ nav a {
 }
 .section {
     width: 100%;
-    padding: 20px;
+    padding:60px 20px 20px;
 }
 .about-heading {
     font-size: 30px;
@@ -297,7 +298,6 @@ nav a {
     width: 100%;
     font-size: 200px;
     margin-top: 40px;
-    padding-right: 40px;
     color: var(--blue);
     display: flex;
     justify-content: center;
@@ -308,6 +308,9 @@ nav a {
     padding-top: 10px;
     color: var(--black);
     text-align: center;
+}
+.about-info .learn-more {
+    text-decoration: none;
 }
 .about-button {
     display: block;
@@ -354,6 +357,7 @@ nav a {
 }
 .work-content {
     position: relative;
+    padding: 0;
 }
 .work-content .imageFrame {
     margin-bottom: 16px;
@@ -390,16 +394,6 @@ nav a {
 .project-info {
     width: 100%;
 }
-/* .project:first-child .project-data {
-    padding-top: 180px;
-} */
-/* .project:first-child .project-data {
-    padding-top: 200px;
-} */
-.project-data {
-    /* padding-top: 180px; */
-}
-
 .project-data h5 {
     font-size: 20px;
     line-height: 130%;
@@ -445,7 +439,6 @@ nav a {
 .live-link:hover , .repo-link:hover {
     background: #000000;
     color: #ffffff;
-    border: ;
 }
 .repo-link img:first-child {
     display: inline-block;
@@ -461,9 +454,12 @@ nav a {
     display: inline-block;
 }
 /* Styling for the goals section */
+.myGoals {
+    padding-top: 60px;
+}
 .myGoals p{
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0 20px;
 }
 .myGoals ul {
     padding-inline-start: 30px;
@@ -476,6 +472,9 @@ nav a {
     text-align: center;
 }
 /* Styling for the hireMe section */
+.hireMe {
+    padding: 0 !important;
+}
 .hireMe-container {
     position: relative;
     border: none;
@@ -486,6 +485,7 @@ nav a {
     gap: 40px;
     padding: 60px 40px 128px;
     justify-content: center;
+    margin-bottom:  80px;
 }
 .hireMe-header {
     display: flex;
@@ -727,7 +727,7 @@ footer div:first-child {
     display: inline-block;
     font-size: 12px;
     padding: 8px 16px;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 .blog-piece-data .tag .date {
     background-color: ;
@@ -771,13 +771,17 @@ footer div:first-child {
 
 }
 @media (min-width: 640px) {
+    *{
+        scrollbar-width: auto;
+        scrollbar-color: var(--blue) rgb(255,255,255);
+    }
     .hero {
         flex-direction: row;
         height: 70vh;
         gap: 20px;
         justify-content: space-between;
         align-items: center;
-        padding: 120px 20px 0;
+        padding: 60px 20px 0;
     }
 
     .hero > div {
@@ -790,7 +794,8 @@ footer div:first-child {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 12px;
+        gap: 35px;
+        font-size: 15px;
     }
 
     .roleText {
@@ -820,6 +825,7 @@ footer div:first-child {
     }
     .about-icon {
         width: 35%;
+        padding-right: 40px;
     }
     .about-info {
         width: 65%;

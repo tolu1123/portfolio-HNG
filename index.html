@@ -22,23 +22,27 @@
         <h1 class="logo open-sans-bold">Tolu <sup>TM</sup></h1>
 
         <!-- The nav bar -->
-        <nav class="flex flex-row justify-between items-center gap-5 open-sans-semibold">
-            <div class="nav-lg md:flex justify-between items-center gap-3">
+        <nav class="open-sans-regular">
+            <div class="nav-lg">
                 <a href="#about">About</a>
                 <a href="#goals">Goals</a>
                 <a href="#works">Works</a>
+                <a href="#blog">Blog</a>
                 <a href="#hireMe">Contact Me</a>
             </div>
 
             <!-- The nav for mobile view -->
-            <div class="nav-sm md:hidden">
-                <span class="text-4xl hamburger"><i class="fa-sharp fa-solid fa-bars"></i></span>
+            <div class="nav-sm">
+                <span class="hamburger">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </span>
         
                 <div class="dropDown">
                     <ul class="">
                         <li><a href="#about">About</a></li>
                         <li><a href="#goals">Goals</a></li>
                         <li><a href="#works">Works</a></li>
+                        <li><a href="#blog">Blog</a></li>
                         <li><a href="#hireMe">Contact Me</a></li>
                     </ul>
                 </div>
@@ -110,7 +114,7 @@
                 If you want to be like me, and get into tech more fully, you can join the HNG internship. It is a great place to start your tech journey. Here is a link to the <a  data-testid="hngLink" target="_blank" href="https://hng.tech/learn" style="color: var(--blue);">HNG website</a>. 
                 You may also want to visit <a   data-testid="keywordLink" target="_blank" href="http://keyword.dog" style="color: var(--blue);">keyword.dog</a> and <a   data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/" target="_blank" style="color: var(--blue);">scrapeanyweb.site</a>. These two websites are also a great place to start your tech journey. 
             </div>
-            <a href="https://github.com/tolu1123" target="_blank">
+            <a class="learn-more" href="https://github.com/tolu1123" target="_blank">
                 <button class="about-button inter-medium">
                     LEARN MORE
                 </button>
@@ -120,6 +124,7 @@
 
     <!-- My Goals section? -->
     <div id="goals" class="myGoals section">
+
         <h3 class="goalsHeading open-sans-bold">MY GOALS</h3>
         <p class="inter-regular">This is what i plan to achieve over the course of the <b>next two years</b> in the ever evolving tech field</p>
         <div class="">
@@ -143,7 +148,7 @@
     </div>
 
     <!-- The works section -->
-    <div class="section works" id="works">
+    <div class="" style="padding-inline: 20px;">
 
         <!-- The title of the works section -->
         <div class="workHeader">
@@ -156,7 +161,7 @@
         </div>
 
         <!-- The body of the works section -->
-        <div class="work-content">
+        <div id="works" class="work-content works section">
 
 
             <!-- Each project blog -->
@@ -500,12 +505,12 @@
     </div>
 
     <!-- Blog section -->
-    <div id='blog' class="blog section w-full relative flex flex-col items-center justify-content py-16 px-5">
+    <div id='blog' class="blog section">
 
         <!-- The heading -->
-        <div class="blog-heading mb-10">
+        <div class="blog-heading">
             <h3
-            class='open-sans-bold text-3xl text-darkGreen leading-[110%] mb-5 text-center'
+            class='open-sans-bold'
             >
                 My Blog
             </h3>
@@ -518,17 +523,17 @@
         </div>
 
         <!-- The block of blogs  -->
-        <div class="blog-block w-full flex flex-col sm:flex-row gap-6 sm:gap-10 sm:px-4 lg:px-20">
+        <div class="blog-block">
 
-            <div class="blog-piece sm:w-1/2 bg-white pt-8 pb-12 px-8 rounded-3xl">
+            <div class="blog-piece">
                 <!-- The div for the image -->
-                <div class="blog-piece-img overflow-hidden rounded-2xl mb-4">
+                <div class="blog-piece-img">
 
                     <!-- This element is used for the image -->
                     <img 
                     src="./images/react.jpg" 
                     alt="A developer's default react screen"
-                    class='w-full aspect-[1100/619] object-cover'
+                    class=''
                     />
 
                 </div>
@@ -536,33 +541,39 @@
                 <!-- The data for the blog -->
                 <div class="blog-piece-data">
                     <!-- div for the tag -->
-                    <div class="tag flex flex-row gap-3 mb-4">
+                    <div class="tag inter-medium">
 
                         <!-- The date tag -->
-                        <span class="date bg-blushPink text-coralPink inline-block text-xs inter-medium px-4 py-2 rounded-full">
-                            October 5, 2022
+                        <span class="date inter-medium" style="background-color: rgba(0, 174, 255, 0.2); color: var(--blue);">
+                            June 29, 2024
                         </span>
 
                         <!--/* The blog category -->
-                        <span className="category bg-frostedWhite text-seaFoamBlue inline-block text-xs inter-medium px-4 py-2 rounded-full">
-                            Machine Learning
+                        <span class="category inter-medium"
+                        style="background-color: rgba(0, 174, 255, 0.2); color: var(--blue);">
+                            React
+                        </span>
+                        <!--/* The blog category -->
+                        <span class="category inter-medium"
+                        style="background-color: rgba(0, 174, 255, 0.2); color: var(--blue);">
+                            Javascript
                         </span>
                     </div>
 
                     <!-- The title of the blog -->
-                    <h4 class="blog-title open-sans-bold text-lg leading-[130%] mb-1">
-                        Genetic Algorithm as a Solution to Large Optimization Problems
+                    <h4 class="blog-title open-sans-bold">
+                        React and JS For Begineers
                     </h4>
 
                     <!-- Hook piece -->
-                    <p class="hook inter-regular text-sm line-clamp-2 text-ellipsis mb-4">
-                        Long time ago, nature solved the problem of living with the existence species that can adapt and survive in different kinds of environments on earth. An example of this is evident in the variation of bears such as North American bear, Polar bear, brown bear. The different types of bears are solutions to bear adaptation in their respective geographic location. Likewise, Genetic Algorithm is a copycat of this natural phenomenon in computer science and operation research.
+                    <p class="hook inter-regular">
+                        You could be someone who loves to write Javascript code like me, but shyed away from learning React probably because you were unsure of what it held for you. Or Probably when you think of learning React, you could just experience a mood change or just be skeptical about it. Or you are just someone who wants to tinker with probably the most popular frontend library. Whichever category you fit in, you are very well welcome.
                     </p>
 
                     <!-- The button to read more of the blog -->
                     <a
                     target='_blank'
-                    href='https://medium.com/@amokunridwan/genetic-algorithm-as-a-solution-to-large-optimization-problems-6cd407e6181a'
+                    href='https://dev.to/tolu1123/react-and-js-for-begineers-3fli'
                     class="inline-block bg-darkGreen hover:bg-white text-white transition-all duration-150 ease-linear hover:text-darkGreen inter-medium text-sm leading-[130%] rounded-full px-4 py-2 shadow-sm shadow-darkGreen text-nowrap"
                     >
                         Read More
@@ -575,7 +586,7 @@
     </div>
 
     <!-- Hire Me section -->
-    <div id='hireMe' class='hireMe'>
+    <div id='hireMe' class='hireMe section'>
 
         <div class="hireMe-container">
 
