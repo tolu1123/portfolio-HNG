@@ -3,8 +3,6 @@
     --black: rgba(15, 23, 42, 0.95);
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     scroll-behavior: smooth;
 }
 
@@ -12,6 +10,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow: auto;
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name
@@ -165,9 +168,9 @@ nav a {
 .nav-sm .dropDown{
     width: min(400px, 80vw);
     position: absolute;
-    display: block;
+    display: inline-block;
     top: 60px;
-    left: 100%;
+    right: 0%;
     transform: translateX(100%);
     background-color: var(--blue);
     color: #fff;
@@ -176,7 +179,7 @@ nav a {
 }
 .dropDown-visible {
     /* display: block !important; */
-    transform: translateX(-100%) !important;
+    transform: translateX(0%) !important;
 }
 .dropDown ul {
     text-align: right;
