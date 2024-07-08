@@ -725,18 +725,15 @@ footer div:first-child {
     margin-bottom: 16px;
 }
 .blog-piece-data .tag span {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 12px;
     padding: 8px 16px;
     border-radius: 8px;
-}
-.blog-piece-data .tag .date {
-    background-color: ;
-    font-size: ;
-}
-.blog-piece-data .tag .category {
-    background-color: ;
-    font-size: ;
+    background-color: rgba(0, 174, 255, 0.2);
+    color: var(--blue);
 }
 .blog-piece-data .blog-title {
     font-size: 18px;
