@@ -1,7 +1,10 @@
 :root {
     --blue: #00aeff;
     --black: rgba(15, 23, 42, 0.95);
+    width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
 }
 
@@ -772,6 +775,7 @@ footer div:first-child {
 }
 @media (min-width: 640px) {
     *{
+        width: !important;
         scrollbar-width: auto;
         scrollbar-color: var(--blue) rgb(255,255,255);
     }
