@@ -11,10 +11,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100%;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow-x: clip;
+    overflow-y: auto;
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name
