@@ -200,3 +200,49 @@ function updateDay() {
     }, secondsLeftToday * 1000);
 }
 
+
+// Function for the hire me section
+const form = document.querySelector('form'); 
+const successMessage = document.querySelector('.successful-mailmsg');
+const errorMessage = document.querySelector('.error-mailmsg');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    
+
+    emailjs
+    .sendForm('portfolio-service', 'hire_message_id', form, {
+        publicKey: 'C4jNh7O_rxDVx8qVT',
+    })
+    .then(
+        () => {
+            console.log('SUCCESS!');
+
+            // Reveal the success message
+            successMessage.classList.remove('hidden');
+
+            // Hide the successMessage
+            setTimeout(() => {
+                successMessage.classList.add('hidden');     
+            }, 4000)
+
+        },
+        (error) => {
+            console.log('FAILED...', error.text);
+            
+            // Reveal the error message
+            errorMessage.classList.remove('hidden');
+
+            // Hide the error message after 4 seconds
+            setTimeout(() => {
+                errorMessage.classList.add('hidden');
+            }, 5000)
+        },
+    );
+    // Reset the form after submission
+    form.reset();
+};
+
+form.addEventListener('submit', sendEmail);
+

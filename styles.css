@@ -115,6 +115,10 @@
       "slnt" 0;
   }
 
+.hidden {
+    display: none;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -305,7 +309,7 @@ nav a {
     align-items: center;
 }
 .about-text {
-    font-size: 16px;
+    font-size: 18px;
     padding-top: 10px;
     color: var(--black);
     text-align: center;
@@ -527,6 +531,10 @@ form > div {
 .optionalMessage {
     grid-column: 1 / span 2;
 }
+form .data {
+    color: #fff;
+    grid-column: 1 / span 1;
+}
 label:not(.message) {
     position: absolute;
     left: 0;
@@ -565,7 +573,7 @@ form button {
     width: fit-content;
     background-color: #ffffff;
     color: var(--blue);
-    transition: all 0.8s linear;
+    transition: all 0.5s linear;
     font-size: 16px;
     padding: 10px 35px;
     border: none;
@@ -770,7 +778,7 @@ footer div:first-child {
 }
 @media (min-width: 640px) {
     *{
-        width: !important;
+        /* width: !important; */
         scrollbar-width: auto;
         scrollbar-color: var(--blue) rgb(255,255,255);
     }
